@@ -109,24 +109,4 @@ send_telegram("✅ Gmail Bot চালু হয়েছে! এখন থে�
 
 while True:
     check_email()
-    time.sleep(30)            subject = subject.decode(enc or "utf-8")
-        
-        sender = msg["From"]
-        
-        text = f"""
-📧 <b>নতুন Email এসেছে!</b>
-
-👤 <b>From:</b> {sender}
-📌 <b>Subject:</b> {subject}
-        """
-        send_telegram(text)
-    
-    mail.logout()
-
-print("✅ Bot চালু হয়েছে...")
-while True:
-    try:
-        check_email()
-    except Exception as e:
-        print(f"Error: {e}")
-    time.sleep(60)  # প্রতি ৬০ সেকেন্ডে check করবে
+    time.sleep(30)
